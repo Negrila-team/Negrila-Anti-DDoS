@@ -1,29 +1,29 @@
 @echo off
 :t
-ping localhost -n 1 > nul
+ping localhost -n 3 > nul
 echo running
-ping localhost -n 1 > nul
+ping localhost -n 2 > nul
 cls
 echo Waiting.
-ping localhost -n 1 > nul
+ping localhost -n 2 > nul
 cls
 echo Waiting..
-ping localhost -n 1 > nul
+ping localhost -n 2 > nul
 cls
 echo Waiting...
-ping localhost -n 1 > nul
+ping localhost -n 2 > nul
 cls
 echo Waiting.
-ping localhost -n 1 > nul
+ping localhost -n 2 > nul
 cls
 echo Waiting..
-ping localhost -n 1 > nul
+ping localhost -n 2 > nul
 cls
 echo Waiting...
-ping localhost -n 1 > nul
+ping localhost -n 2 > nul
 cls
 echo successfully
-ping localhost -n 1 > nul
+ping localhost -n 2 > nul
 echo some more...
 ping localhost -n 1 > nul
 echo ##########################################
