@@ -1,55 +1,42 @@
 @echo off
 :t
-ping localhost -n 3 > nul
+ping localhost -n 1 > nul
 echo running
-ping localhost -n 3 > nul
+ping localhost -n 1 > nul
 cls
 echo Waiting.
-ping localhost -n 2 > nul
+ping localhost -n 1 > nul
 cls
 echo Waiting..
-ping localhost -n 2 > nul
+ping localhost -n 1 > nul
 cls
 echo Waiting...
-ping localhost -n 2 > nul
+ping localhost -n 1 > nul
 cls
 echo Waiting.
-ping localhost -n 2 > nul
+ping localhost -n 1 > nul
 cls
 echo Waiting..
-ping localhost -n 2 > nul
+ping localhost -n 1 > nul
 cls
 echo Waiting...
-ping localhost -n 2 > nul
+ping localhost -n 1 > nul
 cls
 echo successfully
-ping localhost -n 2 > nul
+ping localhost -n 1 > nul
 echo some more...
-ping localhost -n 2 > nul
+ping localhost -n 1 > nul
 echo ##########################################
 echo          Negrila Anti-DDoS system
-echo            powered by MskHost       
-echo                    1.5.2
+echo            powered by unknown       
+echo                    1.5.3
 echo ##########################################
 :a
-set /p run=
-if "%run%"=="start" (
-echo Opening Negrila Anti-DDoS
-ping localhost -n 2 > nul
-echo Opened Negrila Anti-DDoS
-ping localhost -n 1 > nul
-echo successfully
-ping localhost -n 1 > nul
-echo ##########################################
-echo          Negrila Anti-DDoS system
-echo                 launched
-echo Anti-DDoS runed to IP 91.200.146.104:7778
-echo ##########################################)
 
 if "%run%"=="help" (
-echo start - start the Anti ddos
+echo start - start the Anti-ddos you must be logged in!
 echo sys - system
-echo negrila anti-ddos info
+echo negrila anti-ddos info - info of the system
 echo clear - Clear terminal - good terminal
 echo restart - restart your system
 echo stop - exit.
@@ -75,15 +62,15 @@ if "%run%"=="clear" (
 cls
 echo ##########################################
 echo          Negrila Anti-DDoS system
-echo            powered by MskHost       
-echo                    1.5.2
+echo            powered by unknown       
+echo                    1.5.3
 echo ##########################################)
 
 if "%run%"=="negrila anti-ddos info" (
 echo ##########################################
 echo          Negrila Anti-DDoS system
-echo             powered by MskHost
-echo               version: 1.5.2
+echo             powered by unknown
+echo               version: 1.5.3
 echo               SuSbuntu 1.90
 echo           Created by progame1201
 echo             Using Linux - true
@@ -112,7 +99,22 @@ echo successfully account create!
 )
 if "%run%"=="su %name% %pasw%" (
 echo You logined!
+set log=true
 )
 
-
+set /p run=
+if "%run%"=="start" (
+if "%log%"=="true" (
+echo Opening Negrila Anti-DDoS
+ping localhost -n 2 > nul
+echo Opened Negrila Anti-DDoS
+ping localhost -n 1 > nul
+echo successfully
+ping localhost -n 1 > nul
+echo ##########################################
+echo          Negrila Anti-DDoS system
+echo                 launched
+echo        Anti-DDoS runed to /IP edited\
+echo ##########################################)
+) 
 goto a
