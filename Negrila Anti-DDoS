@@ -1,8 +1,8 @@
 @echo off
 :t
-ping localhost -n 5 > nul
+ping localhost -n 3 > nul
 echo running
-ping localhost -n 5 > nul
+ping localhost -n 3 > nul
 cls
 echo Waiting.
 ping localhost -n 2 > nul
@@ -25,11 +25,11 @@ cls
 echo successfully
 ping localhost -n 2 > nul
 echo some more...
-ping localhost -n 1.5 > nul
+ping localhost -n 2 > nul
 echo ##########################################
 echo          Negrila Anti-DDoS system
 echo            powered by MskHost       
-echo                    1.5.1
+echo                    1.5.2
 echo ##########################################
 :a
 set /p run=
@@ -53,6 +53,8 @@ echo negrila anti-ddos info
 echo clear - Clear terminal - good terminal
 echo restart - restart your system
 echo stop - exit.
+echo sucreate - create a user
+echo su [user] [pasword] - Login
 )
 
 if "%run%"=="sys" (color 4
@@ -74,14 +76,14 @@ cls
 echo ##########################################
 echo          Negrila Anti-DDoS system
 echo            powered by MskHost       
-echo                    1.5.1
+echo                    1.5.2
 echo ##########################################)
 
 if "%run%"=="negrila anti-ddos info" (
 echo ##########################################
 echo          Negrila Anti-DDoS system
 echo             powered by MskHost
-echo               version: 1.5.1
+echo               version: 1.5.2
 echo               SuSbuntu 1.90
 echo           Created by progame1201
 echo             Using Linux - true
@@ -102,5 +104,15 @@ echo stoping
 localhost -n 2 > nul
 exit
 )
+
+if "%run%"=="sucreate" (
+set /p name=name:
+set /p pasw=pasword:
+echo successfully account create!
+)
+if "%run%"=="su %name% %pasw%" (
+echo You logined!
+)
+
 
 goto a
