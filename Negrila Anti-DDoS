@@ -1,5 +1,5 @@
 @echo off
-:с
+:t
 ping localhost -n 5 > nul
 echo running
 ping localhost -n 5 > nul
@@ -29,7 +29,7 @@ ping localhost -n 1.5 > nul
 echo ##########################################
 echo          Negrila Anti-DDoS system
 echo            powered by MskHost       
-echo                    1.5
+echo                    1.5.1
 echo ##########################################
 :a
 set /p run=
@@ -52,6 +52,7 @@ echo sys - system
 echo negrila anti-ddos info
 echo clear - Clear terminal - good terminal
 echo restart - restart your system
+echo stop - exit.
 )
 
 if "%run%"=="sys" (color 4
@@ -73,21 +74,33 @@ cls
 echo ##########################################
 echo          Negrila Anti-DDoS system
 echo            powered by MskHost       
-echo                    1.4
+echo                    1.5.1
 echo ##########################################)
 
 if "%run%"=="negrila anti-ddos info" (
 echo ##########################################
 echo          Negrila Anti-DDoS system
 echo             powered by MskHost
-echo               version: 1.5
+echo               version: 1.5.1
 echo               SuSbuntu 1.90
 echo           Created by progame1201
 echo             Using Linux - true
 echo ##########################################)
 
 if "%run%"=="restart" (
-goto c )
+cls
+goto t )
 
+if "%run%"=="exit" (
+echo stop in 3
+ping localhost -n 2 > nul
+echo stop in 2
+ping localhost -n 2 > nul
+echo stop in 1
+ping localhost -n 2 > nul
+echo stoping
+localhost -n 2 > nul
+exit
+)
 
 goto a
