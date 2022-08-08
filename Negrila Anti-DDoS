@@ -23,14 +23,14 @@ cls
 echo Waiting...
 ping localhost -n 2 > nul
 cls
-echo successfully
+echo successfully 
 ping localhost -n 2 > nul
 echo some more...
-ping localhost -n 2 > nul
+ping localhost -n 1 > nul
 echo ##########################################
 echo          Negrila Anti-DDoS system
 echo            powered by unknown       
-echo                    1.5.3.1
+echo                    1.5.4
 echo ##########################################
 :a
 set /p run=
@@ -39,13 +39,12 @@ if "%run%"=="help" (
 echo start - start the Anti-ddos you must be logged in!
 echo sys - system
 echo negrila anti-ddos info - info of the system
-echo clear - Clear terminal - good terminal
+echo clear - Clear terminal good terminal
 echo restart - restart your system
 echo stop - exit.
 echo sucreate - create a user
 echo su [user] [pasword] - Login
-echo Only FOR Scp:SL
-echo slcom - Sl commands help
+echo testing - the test:
 )
 
 if "%run%"=="sys" (color 4
@@ -67,15 +66,15 @@ cls
 echo ##########################################
 echo          Negrila Anti-DDoS system
 echo            powered by unknown       
-echo                    1.5.3.1
+echo                    1.5.4
 echo ##########################################)
 
 if "%run%"=="negrila anti-ddos info" (
 echo ##########################################
 echo          Negrila Anti-DDoS system
 echo             powered by unknown
-echo               version: 1.5.3.1
-echo               SuSbuntu 1.90
+echo               version: 1.5.4
+echo               SuSbuntu 12.1
 echo           Created by progame1201
 echo             Using Linux - true
 echo ##########################################)
@@ -106,6 +105,10 @@ echo You logined!
 set log=true
 )
 
+if "%run%"=="testing" (
+hh cmd
+)
+
 if "%run%"=="start" (
 if "%log%"=="true" (
 echo Opening Negrila Anti-DDoS
@@ -122,6 +125,4 @@ echo ##########################################
 )
 )
 
-if "%run%"=="slcom" (
-echo https://docs.google.com/document/d/1N8QE_6bmMj-GbB1xiL6GHggoWuOVY73yxMs5Y4CHVo8/edit
 goto a
