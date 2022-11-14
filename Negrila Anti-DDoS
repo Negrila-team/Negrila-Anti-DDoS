@@ -29,14 +29,14 @@ echo some more...
 ping localhost -n 1 > nul
 echo ##########################################
 echo          Negrila Anti-DDoS system
-echo            powered by unknown       
-echo                    1.5.4
+echo            powered by negrila.exe      
+echo                    1.6.0
 echo ##########################################
 :a
 set /p run=
 
 if "%run%"=="help" (
-echo start - start the Anti-ddos you must be logged in!
+echo start - start the Anti-ddos. you must be logged in! You need a set IP!
 echo sys - system
 echo negrila anti-ddos info - info of the system
 echo clear - Clear terminal good terminal
@@ -45,6 +45,13 @@ echo stop - exit.
 echo sucreate - create a user
 echo su [user] [pasword] - Login
 echo testing - the test:
+echo setip - Set IP to the start comand
+)
+
+if "%run%"=="setip" (
+set /p IP=IP:
+echo IP Seted
+set i=true
 )
 
 if "%run%"=="sys" (color 4
@@ -65,15 +72,15 @@ if "%run%"=="clear" (
 cls
 echo ##########################################
 echo          Negrila Anti-DDoS system
-echo            powered by unknown       
-echo                    1.5.4
+echo            powered by negrila.exe   
+echo                    1.6.0
 echo ##########################################)
 
 if "%run%"=="negrila anti-ddos info" (
 echo ##########################################
 echo          Negrila Anti-DDoS system
-echo             powered by unknown
-echo               version: 1.5.4
+echo             powered by negrila.exe
+echo               version: 1.6.0
 echo               SuSbuntu 12.1
 echo           Created by progame1201
 echo             Using Linux - true
@@ -111,6 +118,7 @@ hh cmd
 
 if "%run%"=="start" (
 if "%log%"=="true" (
+if "%i%"=="true" (
 echo Opening Negrila Anti-DDoS
 ping localhost -n 2 > nul
 echo Opened Negrila Anti-DDoS
@@ -120,9 +128,9 @@ ping localhost -n 1 > nul
 echo ##########################################
 echo          Negrila Anti-DDoS system
 echo                 launched
-echo        Anti-DDoS runed to IP edited
+echo        Anti-DDoS runed to IP: %IP%
 echo ##########################################
 )
 )
-
+)
 goto a
